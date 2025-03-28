@@ -2,7 +2,7 @@ import { SearchOutlined } from "@ant-design/icons";
 import "./SearchBar.css";
 import { useState } from "react";
 
-export default function SearchBar({ searchInput, setSearchInput }: any) {
+export default function SearchBar({ setSearchInput }: any) {
   const [inputValue, setInputValue] = useState<string>();
 
   return (
@@ -24,7 +24,12 @@ export default function SearchBar({ searchInput, setSearchInput }: any) {
           />
         </div>
       </div>
-      <button onClick={()=>setSearchInput(inputValue)} className="cursor-pointer bg-gray-600 font-[Roboto-Regular] pl-3 pr-3">Search</button>
+      <button
+        onClick={() => setSearchInput(inputValue)}
+        className="cursor-pointer bg-gray-600 font-[Roboto-Regular] pl-3 pr-3"
+      >
+        Search
+      </button>
     </div>
   );
 }

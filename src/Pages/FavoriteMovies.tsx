@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaHeart, FaTimes } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 
 const FavoriteMovies = () => {
   const [favorites, setFavorites] = useState<any>([]);
@@ -44,7 +44,7 @@ const FavoriteMovies = () => {
                 className="absolute -top-2 -right-2 rounded-full text-white bg-gray-600 p-1 cursor-pointer"
                 onClick={() => toggleFavorite(movie)}
               >
-                <FaTimes  className="text-md" />
+                <FaTimes className="text-md" />
               </button>
             </div>
           ))}

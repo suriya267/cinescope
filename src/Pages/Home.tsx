@@ -70,7 +70,6 @@ const Home = () => {
         <h1 className="text-3xl font-bold mb-4">Welcome to CineScope</h1>
         <div className="flex items-center justify-center mt-7 mb-5">
           <SearchBar
-            searchInput={searchInput}
             setSearchInput={setSearchInput}
           />
         </div>
