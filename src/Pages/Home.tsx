@@ -10,7 +10,7 @@ const Home = () => {
   const [movies, setMovies] = useState<any>([]);
   const [favorites, setFavorites] = useState<any>([]);
   const [searchInput, setSearchInput] = useState<string>("");
-  const [loading, setLoading] = useState<Boolean>();
+  const [loading, setLoading] = useState<Boolean>(false);
 
   const getMovies = () => {
     const apiUrl = "http://www.omdbapi.com/";
@@ -29,12 +29,13 @@ const Home = () => {
         }
         setLoading(false);
       })
-      .catch((err) => console.log("Error", err));
   };
 
   useEffect(() => {
-    setLoading(true);
-    getMovies();
+    if (searchInput != "") {
+      setLoading(true);
+      getMovies();
+    }
   }, [searchInput]);
 
   useEffect(() => {
@@ -69,9 +70,7 @@ const Home = () => {
       <div className="p-6 text-center mt-17">
         <h1 className="text-3xl font-bold mb-4">Welcome to CineScope</h1>
         <div className="flex items-center justify-center mt-7 mb-5">
-          <SearchBar
-            setSearchInput={setSearchInput}
-          />
+          <SearchBar setSearchInput={setSearchInput} />
         </div>
         {loading === false ? (
           <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -88,7 +87,7 @@ const Home = () => {
           </div>
         ) : (
           <div className="text-center pt-[25vh] text-white font-[Roboto-Medium]">
-                <Spin size="large" />
+            <Spin size="large" />
           </div>
         )}
       </div>

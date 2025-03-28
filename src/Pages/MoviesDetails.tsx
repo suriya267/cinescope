@@ -26,7 +26,6 @@ const MovieDetails = () => {
         console.log("response", data);
         setMovie(data);
       })
-      .catch((err) => console.log("Error", err));
   };
 
   useEffect(() => {
