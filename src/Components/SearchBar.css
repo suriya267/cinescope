@@ -1,0 +1,7 @@
+.search-field:focus {
+  outline: none;
+}
+
+.anticon svg {
+  fill: black;
+}
