@@ -27,9 +27,11 @@ const FavoriteMovies = () => {
     <div className="p-6 rounded-lg text-white">
       <h2 className="text-2xl font-[Roboto-Bold] mb-4">Favorite Movies</h2>
       {favorites.length === 0 ? (
-        <p className="text-gray-400 font-[Roboto-Bold] text-center">
-          No favorite movies added.
-        </p>
+        <div className="mt-[37vh]">
+          <p className="text-gray-400 font-[Roboto-Bold] text-center">
+            No favorite movies added.
+          </p>
+        </div>
       ) : (
         <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
           {favorites.map((movie: any) => (
