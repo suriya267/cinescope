@@ -21,7 +21,7 @@ The **Cinescope** is a React-based web application that allows users to search f
 ## Installation & Setup
 
 1. **Clone the repository**:
-   git clone https://github.com/yourusername/movie-search-app.git
+   git clone https://github.com/suriya267/cinescop.git
 
 2. **Install dependencies**:
    npm install
