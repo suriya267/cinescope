@@ -13,7 +13,7 @@ const Home = () => {
   const [loading, setLoading] = useState<Boolean>(false);
 
   const getMovies = () => {
-    const apiUrl = "http://www.omdbapi.com/";
+    const apiUrl = "https://www.omdbapi.com/";
     const params = new URLSearchParams({
       s: searchInput,
       apikey: "d14f494",

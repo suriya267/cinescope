@@ -15,7 +15,7 @@ const MovieDetails = () => {
   const [movie, setMovie] = useState<any>(null);
 
   const getMovies = () => {
-    const apiUrl = "http://www.omdbapi.com/";
+    const apiUrl = "https://www.omdbapi.com/";
     const params = new URLSearchParams({
       i: id,
       apikey: "d14f494",
