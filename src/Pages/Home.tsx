@@ -46,9 +46,9 @@ const Home = () => {
 
   const toggleFavorite = (movie: any) => {
     let updatedFavorites;
-    if (favorites.some((fav: any) => fav.imdbID === movie.imdbID)) {
+    if (favorites.some((fav: any) => fav?.imdbID === movie?.imdbID)) {
       updatedFavorites = favorites.filter(
-        (fav: any) => fav.imdbID !== movie.imdbID
+        (fav: any) => fav?.imdbID !== movie?.imdbID
       );
     } else {
       updatedFavorites = [...favorites, movie];
@@ -74,13 +74,13 @@ const Home = () => {
         </div>
         {loading === false ? (
           <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {movies.map((movie: any) => (
+            {movies?.map((movie: any) => (
               <MovieCard
-                key={movie.imdbID}
+                key={movie?.imdbID}
                 movie={movie}
                 toggleFavorite={toggleFavorite}
-                isFavorite={favorites.some(
-                  (fav: any) => fav.imdbID === movie.imdbID
+                isFavorite={favorites?.some(
+                  (fav: any) => fav?.imdbID === movie?.imdbID
                 )}
               />
             ))}

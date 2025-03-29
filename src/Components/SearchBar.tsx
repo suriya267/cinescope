@@ -6,7 +6,7 @@ export default function SearchBar({ setSearchInput }: any) {
   const [inputValue, setInputValue] = useState<string>();
 
   return (
-    <div className="w-[42%] flex">
+    <div className="sm:w-[90%] md:w-[42%] flex">
       <div
         style={{ backgroundColor: "#f0f5ff" }}
         className="flex item-center px-[20px] py-[10px] w-[90%]"
