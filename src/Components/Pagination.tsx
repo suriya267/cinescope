@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import {useState} from "react";
 
 const Pagination = ({ totalItems, itemsPerPage, onPageChange }: any) => {
   const [currentPage, setCurrentPage] = useState(1);
