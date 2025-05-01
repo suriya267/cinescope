@@ -83,7 +83,7 @@ const Home = () => {
     navigate("favorite-movies");
   };
 
-  const paginationChange = (pageNum: any, pageSize: any) => {
+  const paginationChange = (pageNum: any) => {
     setPage(`${pageNum}`);
   };
 
