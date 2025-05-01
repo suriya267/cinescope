@@ -13,7 +13,7 @@ const MovieCard = ({ movie, toggleFavorite, isFavorite }: any) => {
         alt={movie?.Title}
         className="w-full h-64 object-cover rounded"
       />
-      <h3 className="text-lg font-bold mt-2 font-[Roboto-Bold]">
+      <h3 className="text-sm font-bold mt-2 font-[Roboto-Bold]">
         {movie?.Title}
       </h3>
       <p className="text-gray-400 font-[Roboto-Regular]">{movie?.Year}</p>

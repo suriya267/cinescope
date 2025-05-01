@@ -15,7 +15,6 @@ const Navigate = () => {
             <Route path="/favorite-movies" element={<FavoriteMovies />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          {/* <Footer /> */}
         </div>
       </BrowserRouter>
     </div>

@@ -2,8 +2,15 @@ import { SearchOutlined } from "@ant-design/icons";
 import "./SearchBar.css";
 import { useState } from "react";
 
-export default function SearchBar({ setSearchInput }: any) {
-  const [inputValue, setInputValue] = useState<string>();
+export default function SearchBar({ setSearchInput, getMovies }: any) {
+  const [inputValue, setInputValue] = useState<string>('');
+
+  const handleKeyDown = (e: any) => {    
+    if (e.key === "Enter" && inputValue !== "") {
+      setSearchInput(inputValue);
+      getMovies();
+    }
+  };
 
   return (
     <div className="sm:w-[90%] md:w-[42%] flex">
@@ -18,6 +25,7 @@ export default function SearchBar({ setSearchInput }: any) {
           <input
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
+            onKeyDown={handleKeyDown}
             placeholder="Search for your favorite movies"
             className="px-[7px] text-black search-field w-full font-[Roboto-Regular]"
             type="text"
